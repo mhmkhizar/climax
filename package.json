@@ -1,0 +1,41 @@
+{
+  "name": "template-mern",
+  "version": "1.0.0",
+  "description": "Template repository for MERN stack projects.",
+  "homepage": "https://github.com/mhmkhizar/template-mern#readme",
+  "bugs": {
+    "url": "https://github.com/mhmkhizar/template-mern/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmkhizar/template-mern.git"
+  },
+  "license": "MIT",
+  "author": "Muhammad Khizar",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.dev.cjs",
+    "build": "webpack --config webpack.prod.cjs",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.12",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  }
+}
