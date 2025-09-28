@@ -1,14 +1,14 @@
 {
-  "name": "template-mern",
+  "name": "climax",
   "version": "1.0.0",
-  "description": "Template repository for MERN stack projects.",
-  "homepage": "https://github.com/mhmkhizar/template-mern#readme",
+  "description": "A simple weather app.",
+  "homepage": "https://github.com/mhmkhizar/climax#readme",
   "bugs": {
-    "url": "https://github.com/mhmkhizar/template-mern/issues"
+    "url": "https://github.com/mhmkhizar/climax/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mhmkhizar/template-mern.git"
+    "url": "git+https://github.com/mhmkhizar/climax.git"
   },
   "license": "MIT",
   "author": "Muhammad Khizar",
