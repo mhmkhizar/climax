@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="h-full" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,23 +9,81 @@
     />
     <title>ClimaX</title>
   </head>
-  <body class="bg-neutral-950 text-neutral-50">
-    <header>
-      <form class="flex" id="city-search-form">
-        <div>
+  <body
+    class="h-full bg-neutral-950 font-[family-name:var(--font-roboto)] text-neutral-50"
+  >
+    <!-- Page Wrapper -->
+    <div class="flex h-screen flex-col">
+      <!-- Header -->
+      <header
+        class="mx-auto flex w-full items-center justify-between gap-6 bg-neutral-900 px-8 py-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-1">
+          <span class="material-symbols-rounded !text-3xl text-yellow-500"
+            >air</span
+          >
+          <span class="text-xl">ClimaX</span>
+        </div>
+        <!-- City Search Form -->
+        <form
+          class="flex w-1/2 max-w-[600px] items-center"
+          id="city-search-form"
+        >
           <input
+            class="h-8 w-full rounded-l-full border border-neutral-500 py-1 pl-4 placeholder:text-neutral-500 focus:border-yellow-600 focus:outline-none"
             id="city-search-input"
             type="search"
-            name="city"
-            placeholder="Enter your city"
-            aria-label="Enter your city"
+            placeholder="Enter your city here"
+            aria-label="Enter your city here"
             required
           />
+          <button
+            class="h-8 w-16 cursor-pointer rounded-r-full border border-l-0 border-neutral-500 bg-neutral-800"
+            id="city-search-btn"
+            type="submit"
+          >
+            <span
+              class="material-symbols-rounded icon-wght-200 h-8 w-8 translate-y-1"
+              >search</span
+            >
+          </button>
+        </form>
+        <!-- Unit Toggler -->
+        <div class="flex items-center gap-2">
+          <label
+            class="relative inline-block h-4 w-8 cursor-pointer rounded-full ring"
+            for="unit-toggler"
+          >
+            <input class="peer sr-only" type="checkbox" id="unit-toggler" />
+            <span
+              class="absolute top-1/2 left-0.5 h-4/5 w-2/5 -translate-y-1/2 rounded-full bg-neutral-500 transition-all duration-300 peer-checked:left-4 peer-checked:bg-yellow-500"
+            ></span>
+          </label>
+          <span>°F</span>
         </div>
-        <div>
-          <button id="city-search-btn" type="submit">Search</button>
-        </div>
-      </form>
-    </header>
+      </header>
+      <!-- Main Content -->
+      <main class="w-full flex-1 p-8">
+        <div
+          class="mx-auto h-full w-full max-w-[1200px] rounded-lg bg-neutral-900"
+        ></div>
+      </main>
+      <!-- Footer -->
+      <footer
+        class="w-full bg-neutral-900 px-8 py-2 text-center text-sm text-neutral-500"
+      >
+        <p>
+          Copyright © The Odin Project 2025 — Created By
+          <a
+            class="hover:underline"
+            href="https://github.com/mhmkhizar"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Muhammad Khizar</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
