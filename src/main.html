@@ -26,20 +26,17 @@
           <h1 class="text-xl">ClimaX</h1>
         </div>
         <!-- City Search Form -->
-        <form
-          class="flex w-1/2 max-w-[600px] items-center"
-          id="city-search-form"
-        >
+        <form class="flex w-1/2 max-w-[600px] items-center" id="form">
           <input
             class="h-10 w-full rounded-l-full border border-neutral-500 py-1 pl-4 placeholder:text-neutral-500 focus:border-yellow-600 focus:outline-none"
-            id="city-search-input"
+            id="search-input"
             type="search"
             placeholder="Enter your city here"
             aria-label="Enter your city here"
           />
           <button
             class="h-10 w-20 cursor-pointer rounded-r-full border border-l-0 border-neutral-500 bg-neutral-800"
-            id="city-search-btn"
+            id="search-btn"
             type="button"
           >
             <span
@@ -71,24 +68,31 @@
             <!-- Today's Weather Summary -->
             <section
               class="area flex flex-1 flex-col rounded-lg bg-blue-950 p-6"
+              id="summary-card"
             >
               <div class="flex-1 text-neutral-300">
-                <div class="flex items-center text-xl font-bold">
-                  <h4 class="flex-1">Karachi, Sindh — Pakistan</h4>
-                  <span>04:44 am</span>
+                <div class="flex items-start gap-2">
+                  <h4 class="flex-1 text-xl font-bold" id="summary-location">
+                    Karachi, Sindh — Pakistan
+                  </h4>
+                  <span id="summary-time">04:44 AM</span>
                 </div>
-                <p>Tuesday, September 30, 2025</p>
+                <p id="summary-date">Tuesday, September 30, 2025</p>
               </div>
               <div>
                 <div class="flex items-center text-8xl">
-                  <h2 class="flex-1 font-bold">28°C</h2>
+                  <h2 class="flex-1 font-bold" id="summary-temp">28°C</h2>
                   <span class="material-symbols-rounded icon-fill !text-8xl"
                     >partly_cloudy_day</span
                   >
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold">Partly Cloudy</h3>
-                  <p>Similar temperatures continuing with no rain expected.</p>
+                  <h3 class="text-2xl font-bold" id="summary-condition">
+                    Partly Cloudy
+                  </h3>
+                  <p id="summary-desc">
+                    Similar temperatures continuing with no rain expected.
+                  </p>
                 </div>
               </div>
             </section>
@@ -104,28 +108,26 @@
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
                   <span class="material-symbols-rounded icon-fill"
-                    >partly_cloudy_day</span
+                    >humidity_mid</span
                   >
-                  <h5>Termal Sensation</h5>
-                  <span class="ml-auto font-medium">28°C</span>
+                  <h5>Humidity</h5>
+                  <span class="ml-auto font-medium">88.8%</span>
+                </div>
+                <div
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
+                >
+                  <span class="material-symbols-rounded icon-fill">cloud</span>
+                  <h5>Cloud cover</h5>
+                  <span class="ml-auto font-medium">25%</span>
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
                   <span class="material-symbols-rounded icon-fill"
-                    >partly_cloudy_day</span
+                    >airwave</span
                   >
-                  <h5>Termal Sensation</h5>
-                  <span class="ml-auto font-medium">28°C</span>
-                </div>
-                <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
-                >
-                  <span class="material-symbols-rounded icon-fill"
-                    >partly_cloudy_day</span
-                  >
-                  <h5>Termal Sensation</h5>
-                  <span class="ml-auto font-medium">28°C</span>
+                  <h5>Wind speed</h5>
+                  <span class="ml-auto font-medium">5.8 mph</span>
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
