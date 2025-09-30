@@ -8,8 +8,8 @@ export function init() {
   searchBtn.addEventListener(`click`, handleSearchBtnClick);
 }
 
-async function handleSearchBtnClick(e) {
-  e.preventDefault();
+async function handleSearchBtnClick() {
+  if (!input.value.trim()) return;
   const obj = await Service.getWeather(input.value);
   console.log(obj);
 }
