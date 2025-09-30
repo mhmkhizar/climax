@@ -65,9 +65,9 @@
       <!-- Main Content -->
       <main class="w-full flex-1 p-8">
         <div
-          class="mx-auto flex h-full w-full max-w-[1200px] items-stretch gap-3"
+          class="mx-auto flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
         >
-          <div class="flex flex-col items-stretch gap-3">
+          <div class="flex flex-1 items-stretch gap-3">
             <!-- Today's Weather Summary -->
             <section
               class="area flex flex-1 flex-col rounded-lg bg-blue-950 p-6"
@@ -92,93 +92,82 @@
                 </div>
               </div>
             </section>
-            <!-- Forcast For 5 Days -->
-            <section class="rounded-lg bg-neutral-900 p-6 text-neutral-300">
-              <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
-              <div class="flex flex-col gap-1">
+            <!-- Today's Weather Details -->
+            <section
+              class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
+            >
+              <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
+              <div
+                class="flex h-[calc(100%-2.4rem)] flex-col items-stretch gap-1"
+              >
                 <div
-                  class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
-                  <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
-                  <p class="ml-auto">Partly Cloudy</p>
-                  <span class="material-symbols-rounded icon-fill ml-2"
+                  <span class="material-symbols-rounded icon-fill"
                     >partly_cloudy_day</span
                   >
+                  <h5 class="font-medium">Termal Sensation</h5>
+                  <span class="ml-auto font-medium">28°C</span>
                 </div>
                 <div
-                  class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
-                  <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
-                  <p class="ml-auto">Partly Cloudy</p>
-                  <span class="material-symbols-rounded icon-fill ml-2"
+                  <span class="material-symbols-rounded icon-fill"
                     >partly_cloudy_day</span
                   >
+                  <h5 class="font-medium">Termal Sensation</h5>
+                  <span class="ml-auto font-medium">28°C</span>
                 </div>
                 <div
-                  class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
-                  <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
-                  <p class="ml-auto">Partly Cloudy</p>
-                  <span class="material-symbols-rounded icon-fill ml-2"
+                  <span class="material-symbols-rounded icon-fill"
                     >partly_cloudy_day</span
                   >
+                  <h5 class="font-medium">Termal Sensation</h5>
+                  <span class="ml-auto font-medium">28°C</span>
                 </div>
                 <div
-                  class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
-                  <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
-                  <p class="ml-auto">Partly Cloudy</p>
-                  <span class="material-symbols-rounded icon-fill ml-2"
+                  <span class="material-symbols-rounded icon-fill"
                     >partly_cloudy_day</span
                   >
+                  <h5 class="font-medium">Termal Sensation</h5>
+                  <span class="ml-auto font-medium">28°C</span>
                 </div>
-                <div
-                  class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
-                >
-                  <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
-                  <p class="ml-auto">Partly Cloudy</p>
-                  <span class="material-symbols-rounded icon-fill ml-2"
+                <div class="flex flex-1 items-center gap-2 py-3">
+                  <span class="material-symbols-rounded icon-fill"
                     >partly_cloudy_day</span
                   >
+                  <h5 class="font-medium">Termal Sensation</h5>
+                  <span class="ml-auto font-medium">28°C</span>
                 </div>
               </div>
             </section>
           </div>
-          <!-- Today's Weather Details -->
-          <section
-            class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
-          >
-            <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
-            <div class="flex items-center gap-2 py-3">
-              <span class="material-symbols-rounded icon-fill"
-                >partly_cloudy_day</span
+          <!-- Forcast For 5 Days -->
+          <section class="rounded-lg bg-neutral-900 p-6 text-neutral-300">
+            <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
+            <div class="flex flex-col gap-1">
+              <div
+                class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
               >
-              <h5 class="font-medium">Termal Sensation</h5>
-              <span class="ml-auto font-medium">28°C</span>
-            </div>
-            <hr class="text-neutral-700" />
-            <div class="flex items-center gap-2 py-3">
-              <span class="material-symbols-rounded icon-fill"
-                >partly_cloudy_day</span
+                <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
+                <p class="ml-auto">Partly Cloudy</p>
+                <span class="material-symbols-rounded icon-fill ml-2"
+                  >partly_cloudy_day</span
+                >
+              </div>
+              <div
+                class="flex items-center rounded-md bg-neutral-800 px-4 py-3"
               >
-              <h5 class="font-medium">Termal Sensation</h5>
-              <span class="ml-auto font-medium">28°C</span>
-            </div>
-            <hr class="text-neutral-700" />
-            <div class="flex items-center gap-2 py-3">
-              <span class="material-symbols-rounded icon-fill"
-                >partly_cloudy_day</span
-              >
-              <h5 class="font-medium">Termal Sensation</h5>
-              <span class="ml-auto font-medium">28°C</span>
-            </div>
-            <hr class="text-neutral-700" />
-            <div class="flex items-center gap-2 py-3">
-              <span class="material-symbols-rounded icon-fill"
-                >partly_cloudy_day</span
-              >
-              <h5 class="font-medium">Termal Sensation</h5>
-              <span class="ml-auto font-medium">28°C</span>
+                <h5 class="font-medium">Wednesday — <span>28°C</span></h5>
+                <p class="ml-auto">Partly Cloudy</p>
+                <span class="material-symbols-rounded icon-fill ml-2"
+                  >partly_cloudy_day</span
+                >
+              </div>
             </div>
           </section>
         </div>
