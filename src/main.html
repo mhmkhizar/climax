@@ -55,6 +55,22 @@
             >
           </button>
         </form>
+        <!-- Toggler Placholder -->
+        <div class="flex items-center gap-2">
+          <label
+            class="relative inline-block h-4 w-8 cursor-pointer rounded-full ring"
+            for="toggler-placeholder"
+          >
+            <input
+              class="peer sr-only"
+              type="checkbox"
+              id="toggler-placeholder"
+            />
+            <span
+              class="absolute top-1/2 left-0.5 h-4/5 w-2/5 -translate-y-1/2 rounded-full bg-neutral-500 transition-all duration-300 peer-checked:left-4 peer-checked:bg-yellow-500"
+            ></span>
+          </label>
+        </div>
       </header>
       <!-- Main Content -->
       <main class="w-full flex-1 p-8">
