@@ -32,10 +32,28 @@ async function handleSearchBtnClick(e) {
     lat: weatherData.latitude,
     lon: weatherData.longitude,
   });
+
   UI.update({
     location: `${locationData.address.city}, ${locationData.address.state}`,
     time: format(new Date(), "hh:mm a"),
     date: format(new Date(), "EEEE, MMMM d, yyyy"),
+    temp: `${weatherData.currentConditions.feelslike}${getTempUnit(unitsSelectInput.value)}`,
+    condition: weatherData.currentConditions.conditions,
+    desc: weatherData.description,
   });
+
   citySearchInput.value = ``;
+}
+
+function getTempUnit(unitSystem) {
+  switch (unitSystem) {
+    case `metric`:
+      return `°C`;
+    case `us`:
+      return `°F`;
+    case `uk`:
+      return `°C`;
+    default:
+      return ``;
+  }
 }
