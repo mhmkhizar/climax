@@ -45,3 +45,11 @@ input[type="search"]::-webkit-search-cancel-button {
   background-size: 32px 32px;
   cursor: pointer;
 }
+
+select {
+  @apply appearance-none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="oklch(98.5% 0 0)" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.25rem 1.25rem;
+}
