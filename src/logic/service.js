@@ -25,3 +25,16 @@ export async function getLocation({ lat, lon }) {
     throw new Error(`Reverse Geocoding Error: ${error.message}`);
   }
 }
+
+export function getTempUnit(unitSystem) {
+  switch (unitSystem) {
+    case `metric`:
+      return `°C`;
+    case `us`:
+      return `°F`;
+    case `uk`:
+      return `°C`;
+    default:
+      return ``;
+  }
+}
