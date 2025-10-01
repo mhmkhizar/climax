@@ -47,6 +47,11 @@ async function handleSearchBtnClick(e) {
       .iconColor,
     condition: weatherData.currentConditions.conditions,
     desc: weatherData.description,
+    humidity: `${weatherData.currentConditions.humidity} %`,
+    dewPoint: `${weatherData.currentConditions.dew} ${Service.getTempUnit(unitsSelectInput.value)}`,
+    cloudCover: `${weatherData.currentConditions.cloudcover} %`,
+    windSpeed: `${weatherData.currentConditions.windspeed} ${Service.getSpeedUnit(unitsSelectInput.value)}`,
+    visibility: `${weatherData.currentConditions.visibility} ${Service.getDistanceUnit(unitsSelectInput.value)}`,
   });
 
   citySearchInput.value = ``;

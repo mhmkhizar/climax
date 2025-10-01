@@ -1,5 +1,6 @@
 import * as Form from "./form";
 import * as SummaryCard from "./summary-card";
+import * as DetailsCard from "./details-card";
 
 export function init() {
   Form.init();
@@ -16,6 +17,11 @@ export function update({
   iconColor,
   condition,
   desc,
+  humidity,
+  dewPoint,
+  cloudCover,
+  windSpeed,
+  visibility,
 }) {
   SummaryCard.update({
     bgColor: summaryBgColor,
@@ -28,5 +34,13 @@ export function update({
     iconColor: iconColor,
     condition: condition,
     desc: desc,
+  });
+
+  DetailsCard.update({
+    humidity: humidity,
+    dewPoint: dewPoint,
+    cloudCover: cloudCover,
+    windSpeed: windSpeed,
+    visibility: visibility,
   });
 }

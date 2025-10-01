@@ -40,10 +40,32 @@ export function getTempUnit(unitSystem) {
   }
 }
 
+export function getSpeedUnit(unitSystem) {
+  switch (unitSystem) {
+    case `metric`:
+      return `km/h`;
+    case `us`:
+      return `mph`;
+    case `uk`:
+      return `mph`;
+    default:
+      return ``;
+  }
+}
+
+export function getDistanceUnit(unitSystem) {
+  switch (unitSystem) {
+    case `metric`:
+      return `km`;
+    case `us`:
+      return `miles`;
+    case `uk`:
+      return `miles`;
+    default:
+      return ``;
+  }
+}
+
 export function getCardInfo(iconId) {
   return Mapping.weatherCardMapping[iconId];
 }
-
-// export function getCardColors(iconId) {
-//   return Mapping.weatherColorMapping[iconId];
-// }

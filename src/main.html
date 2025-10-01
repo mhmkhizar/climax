@@ -116,6 +116,7 @@
             <!-- Today's Weather Details -->
             <section
               class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
+              id="details-card"
             >
               <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
               <div
@@ -128,14 +129,29 @@
                     >humidity_mid</span
                   >
                   <h5>Humidity</h5>
-                  <span class="ml-auto font-medium">88.8%</span>
+                  <span class="ml-auto font-medium" id="details-humidity"
+                    >88.8%</span
+                  >
+                </div>
+                <div
+                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
+                >
+                  <span class="material-symbols-rounded icon-fill"
+                    >dew_point</span
+                  >
+                  <h5>Dew point</h5>
+                  <span class="ml-auto font-medium" id="details-dew-point"
+                    >75.1 °F</span
+                  >
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
                   <span class="material-symbols-rounded icon-fill">cloud</span>
                   <h5>Cloud cover</h5>
-                  <span class="ml-auto font-medium">25%</span>
+                  <span class="ml-auto font-medium" id="details-cloud-cover"
+                    >25%</span
+                  >
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
@@ -144,23 +160,18 @@
                     >airwave</span
                   >
                   <h5>Wind speed</h5>
-                  <span class="ml-auto font-medium">5.8 mph</span>
-                </div>
-                <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
-                >
-                  <span class="material-symbols-rounded icon-fill"
-                    >partly_cloudy_day</span
+                  <span class="ml-auto font-medium" id="details-wind-speed"
+                    >5.8 mph</span
                   >
-                  <h5>Termal Sensation</h5>
-                  <span class="ml-auto font-medium">28°C</span>
                 </div>
                 <div class="flex flex-1 items-center gap-2 py-3">
                   <span class="material-symbols-rounded icon-fill"
-                    >partly_cloudy_day</span
+                    >visibility</span
                   >
-                  <h5>Termal Sensation</h5>
-                  <span class="ml-auto font-medium">28°C</span>
+                  <h5>Visibility</h5>
+                  <span class="ml-auto font-medium" id="details-visibility"
+                    >3.7 miles</span
+                  >
                 </div>
               </div>
             </section>
