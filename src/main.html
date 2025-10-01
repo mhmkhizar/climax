@@ -29,11 +29,19 @@
         <form class="flex w-1/2 max-w-[600px] items-center" id="form">
           <input
             class="h-10 w-full rounded-l-full border border-neutral-500 py-1 pl-4 placeholder:text-neutral-500 focus:border-yellow-600 focus:outline-none"
-            id="search-input"
+            id="city-input"
             type="search"
             placeholder="Enter your city here"
             aria-label="Enter your city here"
           />
+          <select
+            class="h-10 border border-l-0 border-neutral-500 bg-neutral-800 px-1 font-normal focus:outline-none"
+            id="units-select-input"
+          >
+            <option value="metric" selected>Metric Units</option>
+            <option value="us">US Units</option>
+            <option value="uk">UK Units</option>
+          </select>
           <button
             class="h-10 w-20 cursor-pointer rounded-r-full border border-l-0 border-neutral-500 bg-neutral-800"
             id="search-btn"

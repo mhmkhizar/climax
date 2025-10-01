@@ -3,7 +3,7 @@ import * as UI from "./ui";
 import { format } from "date-fns";
 
 const form = document.querySelector(`#form`);
-const input = form.querySelector(`#search-input`);
+const input = form.querySelector(`#city-input`);
 const searchBtn = form.querySelector(`#search-btn`);
 
 export function init() {
