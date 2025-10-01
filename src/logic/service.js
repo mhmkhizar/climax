@@ -1,4 +1,5 @@
 import * as Constants from "./constants";
+import * as Mapping from "./mapping";
 
 export async function getWeather({ location, unitSystem }) {
   try {
@@ -38,3 +39,11 @@ export function getTempUnit(unitSystem) {
       return ``;
   }
 }
+
+export function getIconInfo(iconId) {
+  return Mapping.weatherIconMapping[iconId];
+}
+
+// export function getCardColors(iconId) {
+//   return Mapping.weatherColorMapping[iconId];
+// }

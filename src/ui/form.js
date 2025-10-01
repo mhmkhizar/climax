@@ -38,6 +38,8 @@ async function handleSearchBtnClick(e) {
     time: format(new Date(), "hh:mm a"),
     date: format(new Date(), "EEEE, MMMM d, yyyy"),
     temp: `${weatherData.currentConditions.feelslike}${Service.getTempUnit(unitsSelectInput.value)}`,
+    iconName: Service.getIconInfo(weatherData.currentConditions.icon).name,
+    iconColor: Service.getIconInfo(weatherData.currentConditions.icon).color,
     condition: weatherData.currentConditions.conditions,
     desc: weatherData.description,
   });

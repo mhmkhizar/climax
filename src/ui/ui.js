@@ -5,12 +5,23 @@ export function init() {
   Form.init();
 }
 
-export function update({ location, time, date, temp, condition, desc }) {
+export function update({
+  location,
+  time,
+  date,
+  temp,
+  iconName,
+  iconColor,
+  condition,
+  desc,
+}) {
   SummaryCard.update({
     location: location,
     time: time,
     date: date,
     temp: temp,
+    iconName: iconName,
+    iconColor: iconColor,
     condition: condition,
     desc: desc,
   });
