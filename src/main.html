@@ -76,6 +76,7 @@
       <main class="flex w-full flex-1 items-center justify-center p-8">
         <div
           class="!hidden flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
+          id="weather-content"
         >
           <div class="flex flex-1 items-stretch gap-3">
             <!-- Today's Weather Summary -->
@@ -195,15 +196,15 @@
         </div>
         <div class="flex gap-2" id="loading-spinner">
           <div
-            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all"
             id="ball-1"
           ></div>
           <div
-            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all"
             id="ball-2"
           ></div>
           <div
-            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all"
             id="ball-3"
           ></div>
         </div>

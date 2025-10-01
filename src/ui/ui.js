@@ -3,6 +3,9 @@ import * as SummaryCard from "./summary-card";
 import * as DetailsCard from "./details-card";
 import * as ForecastCard from "./forecast-card";
 
+export const weatherContent = document.querySelector(`#weather-content`);
+export const loadingSpinner = document.querySelector(`#loading-spinner`);
+
 export function init() {
   Form.init();
 }
@@ -26,6 +29,9 @@ export function update({
   dayObjsArray,
   selectedUnitSystem,
 }) {
+  loadingSpinner.classList.add(`!hidden`);
+  weatherContent.classList.remove(`!hidden`);
+
   SummaryCard.update({
     bgColor: summaryBgColor,
     textColor: summaryTextColor,

@@ -1,6 +1,7 @@
 import * as Service from "../logic/service";
 import * as UI from "./ui";
 import { format } from "date-fns";
+import * as LoadingSpinner from "./loading-spinner";
 
 const form = document.querySelector(`#form`);
 const citySearchInput = form.querySelector(`#city-search-input`);
@@ -19,6 +20,9 @@ async function handleSearchBtnClick(e) {
     citySearchInput.setCustomValidity(`Please enter your city here`);
     return;
   }
+  UI.weatherContent.classList.add(`!hidden`);
+  UI.loadingSpinner.classList.remove(`!hidden`);
+  LoadingSpinner.animate();
   e.preventDefault();
   const weatherData = await Service.getWeather({
     location: citySearchInput.value,
