@@ -73,43 +73,49 @@
         </div>
       </header>
       <!-- Main Content -->
-      <main class="w-full flex-1 p-8">
+      <main class="flex w-full flex-1 items-center justify-center p-8">
         <div
-          class="mx-auto flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
+          class="!hidden flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
         >
           <div class="flex flex-1 items-stretch gap-3">
             <!-- Today's Weather Summary -->
             <section
-              class="area invisible flex flex-1 flex-col rounded-lg bg-neutral-900 p-6"
+              class="flex flex-1 flex-col rounded-lg bg-neutral-900 p-6"
               id="summary-card"
             >
               <div class="flex-1 opacity-80">
                 <div class="flex items-start gap-2">
-                  <h4
-                    class="flex-1 text-xl font-bold"
-                    id="summary-location"
-                  ></h4>
-                  <span id="summary-time"></span>
+                  <h4 class="flex-1 text-xl font-bold" id="summary-location">
+                    Karachi Division, Sindh
+                  </h4>
+                  <span id="summary-time"> 04:17 AM</span>
                 </div>
-                <p id="summary-date"></p>
+                <p id="summary-date">Thursday, October 2, 2025</p>
               </div>
               <div>
                 <div class="flex items-center gap-12">
-                  <h2 class="flex-1 text-8xl font-bold" id="summary-temp"></h2>
+                  <h2 class="flex-1 text-8xl font-bold" id="summary-temp">
+                    30°C
+                  </h2>
                   <span
                     class="material-symbols-rounded icon-fill !text-8xl"
                     id="summary-icon"
-                  ></span>
+                    >partly_cloudy_night</span
+                  >
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold" id="summary-condition"></h3>
-                  <p id="summary-desc"></p>
+                  <h3 class="text-2xl font-bold" id="summary-condition">
+                    Partially cloudy
+                  </h3>
+                  <p id="summary-desc">
+                    Similar temperatures continuing with no rain expected.
+                  </p>
                 </div>
               </div>
             </section>
             <!-- Today's Weather Details -->
             <section
-              class="invisible flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
+              class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
               id="details-card"
             >
               <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
@@ -177,7 +183,7 @@
           </div>
           <!-- Forcast For 5 Days -->
           <section
-            class="invisible rounded-lg bg-neutral-900 p-6 text-neutral-300"
+            class="rounded-lg bg-neutral-900 p-6 text-neutral-300"
             id="forecast-section"
           >
             <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
@@ -186,6 +192,20 @@
               id="forecast-cards-container"
             ></div>
           </section>
+        </div>
+        <div class="flex gap-2" id="loading-spinner">
+          <div
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            id="ball-1"
+          ></div>
+          <div
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            id="ball-2"
+          ></div>
+          <div
+            class="full h-6 w-6 rounded-full bg-neutral-800 transition-all delay-500"
+            id="ball-3"
+          ></div>
         </div>
       </main>
       <!-- Footer -->
