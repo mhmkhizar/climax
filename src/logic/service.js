@@ -1,9 +1,9 @@
 import * as Constants from "./constants";
 
-export async function getWeather({ location }) {
+export async function getWeather({ location, unitSystem }) {
   try {
     const resp = await fetch(
-      `${Constants.weatherAPI.baseURL}/${location}?key=${Constants.weatherAPI.key}`,
+      `${Constants.weatherAPI.baseURL}/${location}?key=${Constants.weatherAPI.key}&unitGroup=${unitSystem}`,
     );
     if (!resp.ok) throw new Error("Network error");
     const data = await resp.json();

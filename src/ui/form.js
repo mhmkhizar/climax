@@ -3,16 +3,26 @@ import * as UI from "./ui";
 import { format } from "date-fns";
 
 const form = document.querySelector(`#form`);
-const input = form.querySelector(`#city-search-input`);
+const citySearchInput = form.querySelector(`#city-search-input`);
+const unitsSelectInput = form.querySelector(`#units-select-input`);
 const searchBtn = form.querySelector(`#search-btn`);
 
 export function init() {
   searchBtn.addEventListener(`click`, handleSearchBtnClick);
+  citySearchInput.addEventListener(`input`, () => {
+    citySearchInput.setCustomValidity(``);
+  });
 }
 
 async function handleSearchBtnClick(e) {
-  if (!input.value) return;
-  const weatherData = await Service.getWeather({ location: input.value });
+  if (!citySearchInput.value) {
+    citySearchInput.setCustomValidity(`Please enter your city here`);
+    return;
+  }
+  const weatherData = await Service.getWeather({
+    location: citySearchInput.value,
+    unitSystem: unitsSelectInput.value,
+  });
   console.log(
     "🚀 ~ form.js:15 ~ handleSearchBtnClick ~ weatherData:",
     weatherData,
