@@ -19,6 +19,7 @@ export function update({
   condition,
   desc,
 }) {
+  card.classList.remove(`invisible`);
   card.classList.add(bgColor);
   card.classList.add(textColor);
   locationHeading.textContent = location;

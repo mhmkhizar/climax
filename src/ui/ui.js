@@ -1,6 +1,7 @@
 import * as Form from "./form";
 import * as SummaryCard from "./summary-card";
 import * as DetailsCard from "./details-card";
+import * as ForecastCard from "./forecast-card";
 
 export function init() {
   Form.init();
@@ -22,6 +23,8 @@ export function update({
   cloudCover,
   windSpeed,
   visibility,
+  dayObjsArray,
+  selectedUnitSystem,
 }) {
   SummaryCard.update({
     bgColor: summaryBgColor,
@@ -42,5 +45,10 @@ export function update({
     cloudCover: cloudCover,
     windSpeed: windSpeed,
     visibility: visibility,
+  });
+
+  ForecastCard.generate({
+    dayObjsArray: dayObjsArray,
+    selectedUnitSystem: selectedUnitSystem,
   });
 }

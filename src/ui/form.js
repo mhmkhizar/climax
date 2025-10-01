@@ -52,6 +52,8 @@ async function handleSearchBtnClick(e) {
     cloudCover: `${weatherData.currentConditions.cloudcover} %`,
     windSpeed: `${weatherData.currentConditions.windspeed} ${Service.getSpeedUnit(unitsSelectInput.value)}`,
     visibility: `${weatherData.currentConditions.visibility} ${Service.getDistanceUnit(unitsSelectInput.value)}`,
+    dayObjsArray: weatherData.days.slice(0, 5),
+    selectedUnitSystem: unitsSelectInput.value,
   });
 
   citySearchInput.value = ``;

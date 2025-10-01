@@ -13,6 +13,7 @@ export function update({
   windSpeed,
   visibility,
 }) {
+  card.classList.remove(`invisible`);
   humiditySpan.textContent = humidity;
   dewPointSpan.textContent = dewPoint;
   cloudCoverSpan.textContent = cloudCover;

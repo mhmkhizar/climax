@@ -80,42 +80,36 @@
           <div class="flex flex-1 items-stretch gap-3">
             <!-- Today's Weather Summary -->
             <section
-              class="area flex flex-1 flex-col rounded-lg p-6"
+              class="area invisible flex flex-1 flex-col rounded-lg bg-neutral-900 p-6"
               id="summary-card"
             >
               <div class="flex-1 opacity-80">
                 <div class="flex items-start gap-2">
-                  <h4 class="flex-1 text-xl font-bold" id="summary-location">
-                    Karachi, Sindh — Pakistan
-                  </h4>
-                  <span id="summary-time">04:44 AM</span>
+                  <h4
+                    class="flex-1 text-xl font-bold"
+                    id="summary-location"
+                  ></h4>
+                  <span id="summary-time"></span>
                 </div>
-                <p id="summary-date">Tuesday, September 30, 2025</p>
+                <p id="summary-date"></p>
               </div>
               <div>
                 <div class="flex items-center gap-12">
-                  <h2 class="flex-1 text-8xl font-bold" id="summary-temp">
-                    28.5°C
-                  </h2>
+                  <h2 class="flex-1 text-8xl font-bold" id="summary-temp"></h2>
                   <span
                     class="material-symbols-rounded icon-fill !text-8xl"
                     id="summary-icon"
-                    >partly_cloudy_day</span
-                  >
+                  ></span>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold" id="summary-condition">
-                    Partly Cloudy
-                  </h3>
-                  <p id="summary-desc">
-                    Similar temperatures continuing with no rain expected.
-                  </p>
+                  <h3 class="text-2xl font-bold" id="summary-condition"></h3>
+                  <p id="summary-desc"></p>
                 </div>
               </div>
             </section>
             <!-- Today's Weather Details -->
             <section
-              class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
+              class="invisible flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
               id="details-card"
             >
               <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
@@ -129,9 +123,10 @@
                     >humidity_mid</span
                   >
                   <h5>Humidity</h5>
-                  <span class="ml-auto font-medium" id="details-humidity"
-                    >88.8%</span
-                  >
+                  <span
+                    class="ml-auto font-medium"
+                    id="details-humidity"
+                  ></span>
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
@@ -140,18 +135,20 @@
                     >dew_point</span
                   >
                   <h5>Dew point</h5>
-                  <span class="ml-auto font-medium" id="details-dew-point"
-                    >75.1 °F</span
-                  >
+                  <span
+                    class="ml-auto font-medium"
+                    id="details-dew-point"
+                  ></span>
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                 >
                   <span class="material-symbols-rounded icon-fill">cloud</span>
                   <h5>Cloud cover</h5>
-                  <span class="ml-auto font-medium" id="details-cloud-cover"
-                    >25%</span
-                  >
+                  <span
+                    class="ml-auto font-medium"
+                    id="details-cloud-cover"
+                  ></span>
                 </div>
                 <div
                   class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
@@ -160,51 +157,34 @@
                     >airwave</span
                   >
                   <h5>Wind speed</h5>
-                  <span class="ml-auto font-medium" id="details-wind-speed"
-                    >5.8 mph</span
-                  >
+                  <span
+                    class="ml-auto font-medium"
+                    id="details-wind-speed"
+                  ></span>
                 </div>
                 <div class="flex flex-1 items-center gap-2 py-3">
                   <span class="material-symbols-rounded icon-fill"
                     >visibility</span
                   >
                   <h5>Visibility</h5>
-                  <span class="ml-auto font-medium" id="details-visibility"
-                    >3.7 miles</span
-                  >
+                  <span
+                    class="ml-auto font-medium"
+                    id="details-visibility"
+                  ></span>
                 </div>
               </div>
             </section>
           </div>
           <!-- Forcast For 5 Days -->
           <section
-            class="rounded-lg bg-neutral-900 p-6 text-neutral-300"
-            id="forecast-card-section"
+            class="invisible rounded-lg bg-neutral-900 p-6 text-neutral-300"
+            id="forecast-section"
           >
             <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
             <div
               class="flex items-stretch gap-1.5"
               id="forecast-cards-container"
-            >
-              <div class="flex flex-1 flex-col rounded bg-neutral-800 p-3">
-                <div class="border-b border-neutral-700 pb-1.5">
-                  <h5 class="py-0.5 font-medium" id="forecast-day1-name">
-                    Wednesday
-                  </h5>
-                </div>
-                <div class="border-b border-neutral-700 py-1.5">
-                  <span class="text-4xl" id="day1-temp">28°C</span>
-                </div>
-                <div class="flex items-center gap-2 pt-1.5">
-                  <p class="flex-1" id="day1-condition">Cloudy</p>
-                  <span
-                    class="material-symbols-rounded icon-fill !text-xl"
-                    id="day1-icon"
-                    >partly_cloudy_day</span
-                  >
-                </div>
-              </div>
-            </div>
+            ></div>
           </section>
         </div>
       </main>
