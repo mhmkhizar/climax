@@ -8,6 +8,8 @@ const conditionHeading = card.querySelector(`#summary-condition`);
 const descPara = card.querySelector(`#summary-desc`);
 
 export function update({
+  bgColor,
+  textColor,
   location,
   time,
   date,
@@ -17,6 +19,8 @@ export function update({
   condition,
   desc,
 }) {
+  card.classList.add(bgColor);
+  card.classList.add(textColor);
   locationHeading.textContent = location;
   timeSpan.textContent = time;
   datePara.textContent = date;

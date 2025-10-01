@@ -40,8 +40,8 @@ export function getTempUnit(unitSystem) {
   }
 }
 
-export function getIconInfo(iconId) {
-  return Mapping.weatherIconMapping[iconId];
+export function getCardInfo(iconId) {
+  return Mapping.weatherCardMapping[iconId];
 }
 
 // export function getCardColors(iconId) {

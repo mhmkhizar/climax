@@ -6,6 +6,8 @@ export function init() {
 }
 
 export function update({
+  summaryBgColor,
+  summaryTextColor,
   location,
   time,
   date,
@@ -16,6 +18,8 @@ export function update({
   desc,
 }) {
   SummaryCard.update({
+    bgColor: summaryBgColor,
+    textColor: summaryTextColor,
     location: location,
     time: time,
     date: date,

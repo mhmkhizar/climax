@@ -34,12 +34,17 @@ async function handleSearchBtnClick(e) {
   });
 
   UI.update({
+    summaryBgColor: Service.getCardInfo(weatherData.currentConditions.icon)
+      .bgColor,
+    summaryTextColor: Service.getCardInfo(weatherData.currentConditions.icon)
+      .textColor,
     location: `${locationData.address.city}, ${locationData.address.state}`,
     time: format(new Date(), "hh:mm a"),
     date: format(new Date(), "EEEE, MMMM d, yyyy"),
     temp: `${weatherData.currentConditions.feelslike}${Service.getTempUnit(unitsSelectInput.value)}`,
-    iconName: Service.getIconInfo(weatherData.currentConditions.icon).name,
-    iconColor: Service.getIconInfo(weatherData.currentConditions.icon).color,
+    iconName: Service.getCardInfo(weatherData.currentConditions.icon).iconName,
+    iconColor: Service.getCardInfo(weatherData.currentConditions.icon)
+      .iconColor,
     condition: weatherData.currentConditions.conditions,
     desc: weatherData.description,
   });
