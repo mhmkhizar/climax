@@ -19,6 +19,7 @@ async function handleSearchBtnClick(e) {
     citySearchInput.setCustomValidity(`Please enter your city here`);
     return;
   }
+  e.preventDefault();
   const weatherData = await Service.getWeather({
     location: citySearchInput.value,
     unitSystem: unitsSelectInput.value,
@@ -36,5 +37,5 @@ async function handleSearchBtnClick(e) {
     time: format(new Date(), "hh:mm a"),
     date: format(new Date(), "EEEE, MMMM d, yyyy"),
   });
-  e.preventDefault();
+  citySearchInput.value = ``;
 }
