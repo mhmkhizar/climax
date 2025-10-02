@@ -20,18 +20,24 @@ async function handleSearchBtnClick(e) {
     citySearchInput.setCustomValidity(`Please enter your city here`);
     return;
   }
+
+  UI.errorMessage.classList.add(`!hidden`);
   UI.weatherContent.classList.add(`!hidden`);
   UI.loadingSpinner.classList.remove(`!hidden`);
   LoadingSpinner.animate();
   e.preventDefault();
+
   const weatherData = await Service.getWeather({
     location: citySearchInput.value,
     unitSystem: unitsSelectInput.value,
   });
-  console.log(
-    "🚀 ~ form.js:15 ~ handleSearchBtnClick ~ weatherData:",
-    weatherData,
-  );
+  if (weatherData === null) {
+    UI.weatherContent.classList.add(`!hidden`);
+    UI.loadingSpinner.classList.add(`!hidden`);
+    UI.errorMessage.classList.remove(`!hidden`);
+    return;
+  }
+
   const locationData = await Service.getLocation({
     lat: weatherData.latitude,
     lon: weatherData.longitude,

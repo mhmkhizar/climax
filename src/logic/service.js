@@ -6,11 +6,15 @@ export async function getWeather({ location, unitSystem }) {
     const resp = await fetch(
       `${Constants.weatherAPI.baseURL}/${location}?key=${Constants.weatherAPI.key}&unitGroup=${unitSystem}`,
     );
-    if (!resp.ok) throw new Error("Network error");
+    if (!resp.ok) {
+      console.error(`Network error.`);
+      return null;
+    }
     const data = await resp.json();
     return data;
   } catch (error) {
-    throw new Error(`Weather API Error: ${error.message}`);
+    console.log(error);
+    return null;
   }
 }
 

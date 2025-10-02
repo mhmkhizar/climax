@@ -5,6 +5,7 @@ import * as ForecastCard from "./forecast-card";
 
 export const weatherContent = document.querySelector(`#weather-content`);
 export const loadingSpinner = document.querySelector(`#loading-spinner`);
+export const errorMessage = document.querySelector(`#error-message`);
 
 export function init() {
   Form.init();

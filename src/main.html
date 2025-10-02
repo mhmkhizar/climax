@@ -74,125 +74,130 @@
       </header>
       <!-- Main Content -->
       <main class="flex w-full flex-1 items-center justify-center p-8">
-        <div
-          class="!hidden flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
-          id="weather-content"
-        >
-          <div class="flex flex-1 items-stretch gap-3">
-            <!-- Today's Weather Summary -->
-            <section
-              class="flex flex-1 flex-col rounded-lg bg-neutral-900 p-6"
-              id="summary-card"
-            >
-              <div class="flex-1 opacity-80">
-                <div class="flex items-start gap-2">
-                  <h4 class="flex-1 text-xl font-bold" id="summary-location">
-                    Karachi Division, Sindh
-                  </h4>
-                  <span id="summary-time"> 04:17 AM</span>
-                </div>
-                <p id="summary-date">Thursday, October 2, 2025</p>
-              </div>
-              <div>
-                <div class="flex items-center gap-12">
-                  <h2 class="flex-1 text-8xl font-bold" id="summary-temp">
-                    30°C
-                  </h2>
-                  <span
-                    class="material-symbols-rounded icon-fill !text-8xl"
-                    id="summary-icon"
-                    >partly_cloudy_night</span
-                  >
+        <div class="!hidden" id="weather-content">
+          <div
+            class="flex h-full w-full max-w-[1200px] flex-col items-stretch gap-3"
+          >
+            <div class="flex flex-1 items-stretch gap-3">
+              <!-- Today's Weather Summary -->
+              <section
+                class="flex flex-1 flex-col rounded-lg bg-neutral-900 p-6"
+                id="summary-card"
+              >
+                <div class="flex-1 opacity-80">
+                  <div class="flex items-start gap-2">
+                    <h4 class="flex-1 text-xl font-bold" id="summary-location">
+                      Karachi Division, Sindh
+                    </h4>
+                    <span id="summary-time"> 04:17 AM</span>
+                  </div>
+                  <p id="summary-date">Thursday, October 2, 2025</p>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold" id="summary-condition">
-                    Partially cloudy
-                  </h3>
-                  <p id="summary-desc">
-                    Similar temperatures continuing with no rain expected.
-                  </p>
+                  <div class="flex items-center gap-12">
+                    <h2 class="flex-1 text-8xl font-bold" id="summary-temp">
+                      30°C
+                    </h2>
+                    <span
+                      class="material-symbols-rounded icon-fill !text-8xl"
+                      id="summary-icon"
+                      >partly_cloudy_night</span
+                    >
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold" id="summary-condition">
+                      Partially cloudy
+                    </h3>
+                    <p id="summary-desc">
+                      Similar temperatures continuing with no rain expected.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <!-- Today's Weather Details -->
-            <section
-              class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
-              id="details-card"
-            >
-              <h4 class="mb-3 text-lg font-medium">Today's weather details</h4>
-              <div
-                class="flex h-[calc(100%-2.4rem)] flex-col items-stretch gap-1"
+              </section>
+              <!-- Today's Weather Details -->
+              <section
+                class="flex-1 rounded-lg bg-neutral-900 p-6 text-neutral-300"
+                id="details-card"
               >
+                <h4 class="mb-3 text-lg font-medium">
+                  Today's weather details
+                </h4>
                 <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
+                  class="flex h-[calc(100%-2.4rem)] flex-col items-stretch gap-1"
                 >
-                  <span class="material-symbols-rounded icon-fill"
-                    >humidity_mid</span
+                  <div
+                    class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                   >
-                  <h5>Humidity</h5>
-                  <span
-                    class="ml-auto font-medium"
-                    id="details-humidity"
-                  ></span>
-                </div>
-                <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
-                >
-                  <span class="material-symbols-rounded icon-fill"
-                    >dew_point</span
+                    <span class="material-symbols-rounded icon-fill"
+                      >humidity_mid</span
+                    >
+                    <h5>Humidity</h5>
+                    <span
+                      class="ml-auto font-medium"
+                      id="details-humidity"
+                    ></span>
+                  </div>
+                  <div
+                    class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                   >
-                  <h5>Dew point</h5>
-                  <span
-                    class="ml-auto font-medium"
-                    id="details-dew-point"
-                  ></span>
-                </div>
-                <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
-                >
-                  <span class="material-symbols-rounded icon-fill">cloud</span>
-                  <h5>Cloud cover</h5>
-                  <span
-                    class="ml-auto font-medium"
-                    id="details-cloud-cover"
-                  ></span>
-                </div>
-                <div
-                  class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
-                >
-                  <span class="material-symbols-rounded icon-fill"
-                    >airwave</span
+                    <span class="material-symbols-rounded icon-fill"
+                      >dew_point</span
+                    >
+                    <h5>Dew point</h5>
+                    <span
+                      class="ml-auto font-medium"
+                      id="details-dew-point"
+                    ></span>
+                  </div>
+                  <div
+                    class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                   >
-                  <h5>Wind speed</h5>
-                  <span
-                    class="ml-auto font-medium"
-                    id="details-wind-speed"
-                  ></span>
-                </div>
-                <div class="flex flex-1 items-center gap-2 py-3">
-                  <span class="material-symbols-rounded icon-fill"
-                    >visibility</span
+                    <span class="material-symbols-rounded icon-fill"
+                      >cloud</span
+                    >
+                    <h5>Cloud cover</h5>
+                    <span
+                      class="ml-auto font-medium"
+                      id="details-cloud-cover"
+                    ></span>
+                  </div>
+                  <div
+                    class="flex flex-1 items-center gap-2 border-b border-neutral-700 py-3"
                   >
-                  <h5>Visibility</h5>
-                  <span
-                    class="ml-auto font-medium"
-                    id="details-visibility"
-                  ></span>
+                    <span class="material-symbols-rounded icon-fill"
+                      >airwave</span
+                    >
+                    <h5>Wind speed</h5>
+                    <span
+                      class="ml-auto font-medium"
+                      id="details-wind-speed"
+                    ></span>
+                  </div>
+                  <div class="flex flex-1 items-center gap-2 py-3">
+                    <span class="material-symbols-rounded icon-fill"
+                      >visibility</span
+                    >
+                    <h5>Visibility</h5>
+                    <span
+                      class="ml-auto font-medium"
+                      id="details-visibility"
+                    ></span>
+                  </div>
                 </div>
-              </div>
+              </section>
+            </div>
+            <!-- Forcast For 5 Days -->
+            <section
+              class="rounded-lg bg-neutral-900 p-6 text-neutral-300"
+              id="forecast-section"
+            >
+              <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
+              <div
+                class="flex items-stretch gap-1.5"
+                id="forecast-cards-container"
+              ></div>
             </section>
           </div>
-          <!-- Forcast For 5 Days -->
-          <section
-            class="rounded-lg bg-neutral-900 p-6 text-neutral-300"
-            id="forecast-section"
-          >
-            <h4 class="mb-3 text-lg font-medium">Forecast for 5 days</h4>
-            <div
-              class="flex items-stretch gap-1.5"
-              id="forecast-cards-container"
-            ></div>
-          </section>
         </div>
         <div class="flex gap-2" id="loading-spinner">
           <div
@@ -207,6 +212,9 @@
             class="full h-6 w-6 rounded-full bg-neutral-800 transition-all"
             id="ball-3"
           ></div>
+        </div>
+        <div class="!hidden" id="error-message">
+          <p class="text-xl text-neutral-100">Oops! Something is wrong. 😕</p>
         </div>
       </main>
       <!-- Footer -->
